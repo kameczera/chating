@@ -1,8 +1,8 @@
 import './Contacts.css'
 import Contact from '../Contact';
+import { useState } from 'react';
 
 // remove array before mongodb implementation
-
 const contacts = [
     {
         name: 'arthur',
@@ -19,21 +19,25 @@ const contacts = [
     {
         name: 'marco',
         image: 'https://www.petz.com.br/blog/wp-content/uploads/2022/10/gato-pode-comer-hortela-3.jpg'
-    },
-    {
-        name: 'vitor',
-        image: 'https://static1.patasdacasa.com.br/articles/7/51/27/@/21201-gato-e-mamifero-descubra-tudo-sobre-ess-articles_media_mobile-2.jpg'
     }
 ];
 
 const Contacts = () => {
+
+    const [selectedContact, setSelectedContact] = useState();
+
+    const setContact = (selected) => {
+        setSelectedContact(selected);
+        console.log(selected);
+    }
+
     return(
-        contacts.length < 6 ?
+        contacts.length < 9 ?
         <div className='contacts'>
-            {contacts.map(contact => <Contact name={contact.name} image={contact.image}/>)}
+            {contacts.map(contact => <Contact name={contact.name} image={contact.image} key={contact.name} selectedContact={selected => setContact(selected)}/>)}
         </div>
         : ''
-    );
+        );
 }
 
 export default Contacts;
