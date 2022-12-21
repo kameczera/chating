@@ -1,0 +1,17 @@
+.viewprofile {
+    display: flex;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 8px;
+    justify-content: space-around;
+}
+
+.profileimage {
+    height: 30px;
+    border-radius: 100%;
+}
+
+.menuicon {
+    height:30px;
+    filter: invert(70%);
+}

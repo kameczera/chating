@@ -1,0 +1,24 @@
+.contactButton {
+    width: 100%;
+    display: flex;
+    background-color: #051026;
+    border: 0px;
+    color: white;
+    cursor: pointer;
+    border-bottom: 1px solid #41454d;
+    padding: 13px;
+}
+
+.contactButton:hover {
+    background-color: #4CAF50; /* Green */
+}
+
+.contactName {
+    margin-left: 15px;
+}
+
+.contactImage {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+}

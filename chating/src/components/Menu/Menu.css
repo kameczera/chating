@@ -1,0 +1,6 @@
+.menu {
+    background-color:#081A40;
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+}

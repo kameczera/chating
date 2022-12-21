@@ -1,0 +1,31 @@
+.search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    height: 30px;
+}
+
+.iconsearch{
+    height: 20px;
+    filter: invert(75%);
+}
+
+.buttonsearch {
+    border-radius:7px 0px 0px 7px;
+    cursor: pointer;
+    border: none;
+    background-color: #0B2559;
+}
+
+.menubar:focus {
+    outline: none;
+}
+
+.menubar {
+    width: 80%;
+    background-color: #0B2559;
+    color: white;
+    padding: 3px;
+    border-radius: 0px 7px 7px 0px;
+    border: none;
+}
