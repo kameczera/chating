@@ -1,0 +1,8 @@
+.writeMessage {
+    display: flex;
+    margin-top: 15px;
+}
+
+.inputMessage {
+    width: 100%;
+}
