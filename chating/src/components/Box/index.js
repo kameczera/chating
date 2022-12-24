@@ -5,7 +5,10 @@ import ContextContact from '../../context/ContextContact';
 import { useState } from 'react';
 
 const Box = () => {
-    const [contact, setContact] = useState();
+    const [contact, setContact] = useState({
+        name: '',
+        image: '',
+    });
     return (
         <div className='box'>
             <ContextContact.Provider value={{contact, setContact}}>

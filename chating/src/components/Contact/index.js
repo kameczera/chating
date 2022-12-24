@@ -8,7 +8,10 @@ const Contact = (props) => {
 
     const seeContact = (event) => {
         event.preventDefault();
-        setContact(props.name);
+        setContact({
+            name: props.name,
+            image: props.image
+        });
     }
 
     return(

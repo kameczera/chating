@@ -5,10 +5,10 @@ import { useContext } from 'react';
 const Principal = () => {
 
     const {contact} = useContext(ContextContact);
-    console.log(contact);
     return(
         <div className='principal'>
-            <h2 className='nameContact'>{contact}</h2>
+            <img className='selectedContactImage' src={contact.image}></img>
+            <h2 className='selectedContactName'>{contact.name}</h2>
         </div>
     )
 }
