@@ -1,8 +1,8 @@
 import './Contacts.css'
 import Contact from '../Contact';
-import { useState } from 'react';
+import React from 'react';
 
-// remove array before mongodb implementation
+// remove array after mongodb implementation
 const contacts = [
     {
         name: 'arthur',
@@ -23,18 +23,10 @@ const contacts = [
 ];
 
 const Contacts = () => {
-
-    const [selectedContact, setSelectedContact] = useState();
-
-    const setContact = (selected) => {
-        setSelectedContact(selected);
-        console.log(selected);
-    }
-
     return(
         contacts.length < 9 ?
         <div className='contacts'>
-            {contacts.map(contact => <Contact name={contact.name} image={contact.image} key={contact.name} selectedContact={selected => setContact(selected)}/>)}
+            {contacts.map(contact => <Contact name={contact.name} image={contact.image} key={contact.name} />)}
         </div>
         : ''
         );

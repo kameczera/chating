@@ -1,10 +1,14 @@
+import { useContext } from 'react';
+import ContextContact from '../../context/ContextContact';
 import './Contact.css';
 
 const Contact = (props) => {
 
+    const { setContact } = useContext(ContextContact);
+
     const seeContact = (event) => {
         event.preventDefault();
-        props.selectedContact(props.name);
+        setContact(props.name);
     }
 
     return(
