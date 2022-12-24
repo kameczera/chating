@@ -1,20 +1,8 @@
 .principal {
     display: flex;
+    flex-direction: column;
     width: 100%;
     background-color: #081A40;
     border-left: 1px solid #41454d;
     color: white;
-}
-
-.selectedContactImage {
-    display: flex;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    margin-left: 15px;
-    margin-top: 15px;
-}
-
-.selectedContactName {
-    margin-left: 20px;
 }

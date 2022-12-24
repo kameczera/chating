@@ -1,0 +1,21 @@
+.message {
+    background-color: rgb(63, 63, 97);
+    width: fit-content;
+    min-width: 100px;
+    min-height: 40px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.messageName {
+    font-size: small;
+}
+
+#selfMessage {
+    background-color: rgb(166, 166, 216);
+    align-self: flex-end;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 10px;
+}

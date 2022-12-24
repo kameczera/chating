@@ -1,14 +1,12 @@
 import './Principal.css';
-import ContextContact from '../../context/ContextContact';
-import { useContext } from 'react';
+import ContactInfo from '../ContactInfo';
+import Chat from '../Chat';
 
 const Principal = () => {
-
-    const {contact} = useContext(ContextContact);
     return(
         <div className='principal'>
-            <img className='selectedContactImage' src={contact.image}></img>
-            <h2 className='selectedContactName'>{contact.name}</h2>
+            <ContactInfo />
+            <Chat />
         </div>
     )
 }
