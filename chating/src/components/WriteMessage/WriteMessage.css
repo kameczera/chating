@@ -1,8 +1,15 @@
 .writeMessage {
     display: flex;
     margin-top: 15px;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 .inputMessage {
-    width: 100%;
+    width: 80%;
+    padding: 5px;
+}
+
+.buttonSendMessage {
+    width: 40px;
 }

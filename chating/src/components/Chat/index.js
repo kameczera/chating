@@ -1,12 +1,15 @@
 import './Chat.css';
 import Message from '../Message';
-import { useContext } from 'react';
-import ContextContact from '../../context/ContextContact';
+import { useState } from 'react';
 import WriteMessage from '../WriteMessage';
 
 const Chat = () => {
 
-    const {contact} = useContext(ContextContact);
+    const [message, setMessage] = useState({});
+
+    const sendMessage = () => {
+        messages.push({name: 'kamei', content: {message}});
+    }
 
     const messages = [
         {
@@ -14,7 +17,7 @@ const Chat = () => {
             content: 'Hello bro!'
         },
         {
-            name: 'you',
+            name: 'kamei',
             content: 'hey'
         },
         {
@@ -22,14 +25,16 @@ const Chat = () => {
             content: 'test'
         },
         {
-            name: 'you',
+            name: 'kamei',
             content: 'Hello bro!'
         }
     ]
     return(
         <div className='chat'>
-            {messages.map(message => <Message name={message.name} content={message.content}/>)}
-            <WriteMessage />
+            <form onSubmit={sendMessage}>
+                {messages.map(message => <Message name={message.name} content={message.content}/>)}
+                <WriteMessage messages={messages} newMessage={message => setMessage(message)}/>
+            </form>
         </div>
     );
 }
