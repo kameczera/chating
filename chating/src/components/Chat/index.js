@@ -1,17 +1,11 @@
 import './Chat.css';
 import Message from '../Message';
-import { useState } from 'react';
 import WriteMessage from '../WriteMessage';
+import { useState } from 'react';
 
 const Chat = () => {
 
-    const [message, setMessage] = useState({});
-
-    const sendMessage = () => {
-        messages.push({name: 'kamei', content: {message}});
-    }
-
-    const messages = [
+    const [messages, setMessages] = useState([
         {
             name: 'arthur',
             content: 'Hello bro!'
@@ -26,15 +20,14 @@ const Chat = () => {
         },
         {
             name: 'kamei',
-            content: 'Hello bro!'
+            content: 'abr'
         }
-    ]
+    ]);
+
     return(
         <div className='chat'>
-            <form onSubmit={sendMessage}>
-                {messages.map(message => <Message name={message.name} content={message.content}/>)}
-                <WriteMessage messages={messages} newMessage={message => setMessage(message)}/>
-            </form>
+            {messages.map(message => <Message name={message.name} content={message.content}/>)}
+            <WriteMessage newMessage={message => {setMessages([...messages, {name:'kamei', content: message}])}}/>
         </div>
     );
 }
